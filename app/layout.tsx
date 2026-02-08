@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: "Product Space | University of Illinois",
   description: "Product Space at the University of Illinois",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
