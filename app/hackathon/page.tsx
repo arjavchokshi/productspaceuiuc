@@ -120,7 +120,7 @@ export default function HackathonPage() {
                 <p className="text-4xl md:text-5xl font-black text-white leading-none">
                   {h.stat}
                   {h.unit && (
-                    <span className="text-lg md:text-xl font-bold tracking-tight text-violet-400 ml-1">
+                    <span className="text-lg md:text-xl font-bold tracking-tight text-violet-700 ml-1">
                       {h.unit}
                     </span>
                   )}
@@ -198,10 +198,10 @@ export default function HackathonPage() {
                 }}
                 className="group p-7 md:p-8 rounded-2xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.1)] transition-shadow duration-300 border border-black/5"
               >
-                <p className="text-4xl font-black text-violet-500/20 mb-4">
+                <p className="text-4xl font-black text-violet-700/20 mb-4">
                   {card.step}
                 </p>
-                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-2 group-hover:text-violet-600 transition-colors">
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-2 group-hover:text-violet-700 transition-colors">
                   {card.title}
                 </h3>
                 <p className="text-base text-black/70 leading-relaxed">

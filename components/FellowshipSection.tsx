@@ -96,7 +96,7 @@ export default function FellowshipSection() {
                   transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
                 },
               }}
-              className="inline-block text-violet-600 underline underline-offset-2 font-medium hover:text-violet-700 transition-colors"
+              className="inline-block text-violet-700 underline underline-offset-2 font-medium hover:text-violet-800 transition-colors"
               onMouseEnter={() => setMissionLinkHovered(true)}
               onMouseLeave={() => setMissionLinkHovered(false)}
             >

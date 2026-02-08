@@ -215,7 +215,7 @@ function WhyWeExistSection() {
             <div className="sticky top-[25vh] h-[50vh] flex items-center justify-center">
               <motion.div
                 style={{ scale, opacity: circleOpacity }}
-                className="w-[400px] h-[400px] rounded-full bg-violet-600"
+                className="w-[400px] h-[400px] rounded-full bg-violet-700"
               />
             </div>
           </div>
@@ -287,7 +287,7 @@ function WhyWeExistSection() {
 
             {/* Mobile-only circle placeholder */}
             <div className="md:hidden flex justify-center">
-              <div className="w-48 h-48 rounded-full bg-violet-600" />
+              <div className="w-48 h-48 rounded-full bg-violet-700" />
             </div>
 
             {/* What we do */}

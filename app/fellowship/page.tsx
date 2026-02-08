@@ -168,7 +168,7 @@ export default function FellowshipPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-600 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-700 transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="text-base text-black/70 leading-relaxed">

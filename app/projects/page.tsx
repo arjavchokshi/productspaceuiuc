@@ -230,7 +230,7 @@ export default function ProjectsPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-600 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-700 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-base text-black/70 leading-relaxed">
@@ -270,7 +270,7 @@ export default function ProjectsPage() {
             variants={fadeUp}
           >
             <svg
-              className="w-10 h-10 text-violet-400 mx-auto mb-6"
+              className="w-10 h-10 text-violet-700 mx-auto mb-6"
               fill="currentColor"
               viewBox="0 0 24 24"
             >

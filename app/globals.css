@@ -95,7 +95,7 @@ body {
   font-weight: 700;
   color: white;
   letter-spacing: -0.02em;
-  background: #7c3aed;
+  background: #6d28d9;
   transition: background 0.2s ease;
 }
 
@@ -116,6 +116,6 @@ body {
 }
 
 .purple-gradient-button:hover .explore-inner {
-  background: #6d28d9;
+  background: #5b21b6;
 }
 

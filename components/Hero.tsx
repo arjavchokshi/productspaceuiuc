@@ -86,7 +86,7 @@ export default function Hero() {
             maxAngle={45}
             radius={6}
             cellGap={2}
-            borderStyle="1px dotted #7c3aed"
+            borderStyle="1px dotted #6d28d9"
             faceColor="transparent"
             rippleColor="#7c3aed"
             rippleSpeed={1.5}
@@ -167,7 +167,7 @@ export default function Hero() {
             <span className="blurred-border">
               <a
                 href="#our-mission"
-                className="explore-inner focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/50 focus-visible:ring-offset-2"
+                className="explore-inner focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-700/50 focus-visible:ring-offset-2"
                 onMouseEnter={() => setExploreHovered(true)}
                 onMouseLeave={() => setExploreHovered(false)}
               >

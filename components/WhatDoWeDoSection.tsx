@@ -57,7 +57,7 @@ function CardContent({ card }: { card: (typeof CARDS)[number] }) {
           <p className="text-base md:text-lg text-black/70 leading-relaxed">
             {card.description}
           </p>
-          <span className="mt-4 inline-block text-violet-600 underline underline-offset-2 font-medium hover:text-violet-700 transition-colors">
+          <span className="mt-4 inline-block text-violet-700 underline underline-offset-2 font-medium hover:text-violet-800 transition-colors">
             <RollingText
               text={`Explore ${card.title} →`}
               animate={hovered}
