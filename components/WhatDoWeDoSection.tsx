@@ -11,7 +11,7 @@ const CARDS = [
     title: "Fellowship",
     href: "#our-mission",
     description:
-      "Join our core program to learn product strategy, user research, and execution—then apply it through PM, PMM, and Product Design tracks.",
+      "Join our core program to learn product strategy, user research, and execution, then apply it to projects and careers in PM, PMM, and Product Design.",
     image: "/logos/fellowship.jpeg",
     bg: "bg-violet-50",
   },

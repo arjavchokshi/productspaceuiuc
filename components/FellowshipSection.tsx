@@ -81,9 +81,10 @@ export default function FellowshipSection() {
               }}
               className="text-base md:text-lg text-black/80 leading-relaxed"
             >
-              We teach students the strategy, tradeoffs, and execution that define
-              great product work—then put it into practice through fellowship,
-              projects, and community at Illinois.
+              We teach students the strategy, tradeoffs, and execution that
+              define great product work during fellowship. Then they put it
+              into practice through real client projects that prepare them
+              1:1 for a product job.
             </motion.p>
             <motion.a
               href="#our-mission"
