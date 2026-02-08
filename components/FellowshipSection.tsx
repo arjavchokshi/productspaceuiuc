@@ -79,7 +79,7 @@ export default function FellowshipSection() {
                   transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
                 },
               }}
-              className="text-base md:text-lg font-medium text-black/70 leading-relaxed"
+              className="text-base md:text-lg text-black/70 leading-relaxed"
             >
               We teach students the strategy, tradeoffs, and execution that
               define great product work during fellowship. Then they put it

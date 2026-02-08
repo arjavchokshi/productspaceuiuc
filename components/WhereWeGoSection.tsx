@@ -121,7 +121,7 @@ export default function WhereWeGoSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black text-center">
             Where We Go
           </h2>
-          <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-3xl mx-auto mt-4">
+          <p className="text-base md:text-lg text-black/70 leading-relaxed text-center max-w-3xl mx-auto mt-4">
             Our members work at top tech companies including FAANG+, exciting
             startups, and some have gone on to become founders themselves.
           </p>

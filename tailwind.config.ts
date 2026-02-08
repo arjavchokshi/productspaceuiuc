@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
-        display: ["Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Die Grotesk", "Helvetica", "Arial", "sans-serif"],
+        display: ["Die Grotesk", "Helvetica", "Arial", "sans-serif"],
       },
     },
   },

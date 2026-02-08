@@ -140,7 +140,7 @@ export default function FellowshipPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-10"
+            className="text-base md:text-lg text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-10"
           >
             Three pillars that make the fellowship more than just a course.
           </motion.p>
@@ -171,7 +171,7 @@ export default function FellowshipPage() {
                   <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-600 transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="text-base font-medium text-black/70 leading-relaxed">
+                  <p className="text-base text-black/70 leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
@@ -219,7 +219,7 @@ export default function FellowshipPage() {
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-base font-medium text-black/70 leading-relaxed">
+                <p className="mt-3 text-base text-black/70 leading-relaxed">
                   {item.answer}
                 </p>
               </motion.details>

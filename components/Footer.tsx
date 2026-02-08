@@ -37,7 +37,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="mt-12 mx-auto max-w-6xl px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-sm font-medium text-white/40">
+        <p className="text-sm text-white/40">
           &copy; {new Date().getFullYear()} Product Space @ UIUC 💜
         </p>
 

@@ -125,7 +125,7 @@ export default function HackathonPage() {
                     </span>
                   )}
                 </p>
-                <p className="text-sm md:text-base text-white/40 mt-2 font-medium">
+                <p className="text-sm md:text-base text-white/40 mt-2">
                   {h.label}
                 </p>
               </motion.div>
@@ -157,7 +157,7 @@ export default function HackathonPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-14"
+            className="text-base md:text-lg text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-14"
           >
             Form a team, pick a track, and build something that solves a real
             problem — all in one weekend.
@@ -204,7 +204,7 @@ export default function HackathonPage() {
                 <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-2 group-hover:text-violet-600 transition-colors">
                   {card.title}
                 </h3>
-                <p className="text-base font-medium text-black/70 leading-relaxed">
+                <p className="text-base text-black/70 leading-relaxed">
                   {card.desc}
                 </p>
               </motion.div>

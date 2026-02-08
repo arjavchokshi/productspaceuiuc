@@ -201,7 +201,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-10"
+            className="text-base md:text-lg text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-10"
           >
             End-to-end product work — from running user interviews to shaping
             product strategy and building clear roadmaps.
@@ -233,7 +233,7 @@ export default function ProjectsPage() {
                   <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-base font-medium text-black/70 leading-relaxed">
+                  <p className="text-base text-black/70 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -288,7 +288,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-6"
+            className="text-xl md:text-2xl text-white leading-relaxed mb-6"
           >
             &ldquo;{TESTIMONIAL.quote}&rdquo;
           </motion.blockquote>
@@ -303,7 +303,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.2 },
               },
             }}
-            className="text-base text-white/40 font-medium"
+            className="text-base text-white/40"
           >
             {TESTIMONIAL.author} — {TESTIMONIAL.role}
           </motion.p>
@@ -333,7 +333,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-8"
+            className="text-base md:text-lg text-black/70 leading-relaxed mb-8"
           >
             Have a product challenge your team is tackling? We&apos;d love to
             partner with you.
