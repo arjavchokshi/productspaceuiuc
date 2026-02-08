@@ -1,0 +1,102 @@
+.where-we-go-layout {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.where-we-go-rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bubble-row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 1rem;
+}
+
+.bubble-row-offset {
+  padding: 0 5%;
+}
+
+.where-we-go-center {
+  padding: 0 2rem 2.5rem;
+  text-align: center;
+}
+
+.where-we-go-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  padding: 0.5em;
+  overflow: hidden;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.where-we-go-logo-wrap:hover .logo-cell {
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.1),
+    0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.logo-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.logo-img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.logo-img-big {
+  width: 95%;
+  height: 95%;
+}
+
+.logo-img-extra-big {
+  width: 98%;
+  height: 98%;
+}
+
+.logo-img-small {
+  width: 52%;
+  height: 52%;
+}
+
+.and-more-pill {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: black;
+  letter-spacing: -0.04em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}

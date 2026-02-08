@@ -1,0 +1,117 @@
+:root {
+  --col-gap: 5%;
+  --row-gap: 5%;
+  --cube-perspective: 99999999px;
+  --cube-face-border: 1px solid #fff;
+  --cube-face-bg: #060010;
+}
+
+.default-animation {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+}
+
+.default-animation.h-full.w-full {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.default-animation--scene {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  column-gap: var(--col-gap);
+  row-gap: var(--row-gap);
+  perspective: var(--cube-perspective);
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  container-type: size;
+  container-name: cube-scene;
+}
+
+/* Cube is square: same length for width and height using container query (scene = container) */
+.cube {
+  position: relative;
+  /* ~72% of cell with 18 columns: 100/18 * 0.72 ≈ 4% of scene; use 4 so cubes stay square */
+  width: 22px;
+  height: 22px;
+  width: min(4cqw, 4cqh);
+  height: min(4cqw, 4cqh);
+  aspect-ratio: 1 / 1;
+  transform-style: preserve-3d;
+  justify-self: center;
+  align-self: center;
+}
+
+.cube::before {
+  content: '';
+  position: absolute;
+  top: -36px;
+  right: -36px;
+  bottom: -36px;
+  left: -36px;
+}
+
+.default-animation .cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cube-face-bg);
+  border: var(--cube-face-border);
+  opacity: 1;
+}
+
+.default-animation .cube-face--top {
+  transform: translateY(-50%) rotateX(90deg);
+}
+
+.default-animation .cube-face--bottom {
+  transform: translateY(50%) rotateX(-90deg);
+}
+
+.default-animation .cube-face--left {
+  transform: translateX(-50%) rotateY(-90deg);
+}
+
+.default-animation .cube-face--right {
+  transform: translateX(50%) rotateY(90deg);
+}
+
+.default-animation .cube-face--back,
+.default-animation .cube-face--front {
+  transform: rotateY(-90deg) translateX(50%) rotateY(90deg);
+}
+
+/* Logo only on the front face (front is rendered after back so it draws on top) */
+.default-animation.has-logo .cube-face--front {
+  background-image: none;
+}
+
+.default-animation.has-logo .cube-face--front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #7c3aed;
+  mask-image: var(--cube-face-logo, none);
+  mask-size: 55%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: var(--cube-face-logo, none);
+  -webkit-mask-size: 55%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .default-animation {
+    width: 90%;
+  }
+}

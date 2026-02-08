@@ -1,0 +1,35 @@
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.marquee-inner {
+  display: flex;
+  flex-shrink: 0;
+  width: max-content;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.marquee-text {
+  font-size: clamp(3rem, 12vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: black;
+  white-space: nowrap;
+}
+
+.marquee-sep {
+  font-size: clamp(2rem, 8vw, 6rem);
+  font-weight: 700;
+  color: #7c3aed;
+  margin: 0 0.2em;
+}
+

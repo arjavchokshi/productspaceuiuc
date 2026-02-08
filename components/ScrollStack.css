@@ -1,0 +1,13 @@
+.scroll-stack-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-stack-sticky {
+  /* sticky element — no extra padding or margin */
+}
+
+.scroll-stack-card {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
