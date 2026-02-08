@@ -244,8 +244,8 @@ function WhyWeExistSection() {
                   We have also watched members turn into alumni who land at
                   great companies and do real work on real teams. We have
                   watched our projects become more diverse, more ambitious, and
-                  more creative each semester. The bar keeps rising because the
-                  people keep rising.
+                  more creative each semester. That momentum is what
+                  keeps pushing us forward.
                 </p>
               </RevealBlock>
             </div>

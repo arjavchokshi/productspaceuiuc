@@ -66,10 +66,9 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen w-full overflow-hidden"
     >
-      {/* Background image — behind cubes, fills screen */}
+      {/* Background — white */}
       <div
-        className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("/background.png")' }}
+        className="absolute inset-0 z-[-1] bg-white"
         aria-hidden
       />
 
@@ -131,7 +130,7 @@ export default function Hero() {
           animate="visible"
           className="absolute inset-x-0 top-0 flex flex-col items-center min-w-0 px-6 gap-2"
           style={{
-            paddingTop: "calc((100vh - var(--nav-height)) / 18 + 2px + 2.5rem)",
+            paddingTop: "calc((100vh - var(--nav-height)) / 18 - 1px + 2.5rem)",
           }}
         >
           <motion.img
