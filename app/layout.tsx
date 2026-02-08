@@ -3,6 +3,7 @@ import "./globals.css";
 import ScrollController from "@/components/ScrollController";
 import Navbar from "@/components/Navbar";
 import LoadingScreen from "@/components/LoadingScreen";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Product Space | University of Illinois",
@@ -40,6 +41,7 @@ export default function RootLayout({
         <ScrollController />
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
