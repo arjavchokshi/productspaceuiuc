@@ -86,13 +86,13 @@ export default function FellowshipPage() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-4"
           >
             PM Bootcamp
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl mb-6"
+            className="text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mb-6"
           >
             Equipping students with the skills, experience, and confidence to
             break into product management through workshops, team projects, and
@@ -103,7 +103,7 @@ export default function FellowshipPage() {
             href="https://product-space-uiuc.kit.com/6fe917e91b"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white/90 underline underline-offset-4 font-medium hover:text-white transition-colors"
+            className="inline-block text-white/70 underline underline-offset-4 font-medium hover:text-white transition-colors"
             onMouseEnter={() => setCtaHovered(true)}
             onMouseLeave={() => setCtaHovered(false)}
           >
@@ -125,7 +125,7 @@ export default function FellowshipPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black text-center mb-4"
           >
             What You&apos;ll Get
           </motion.h2>
@@ -140,7 +140,7 @@ export default function FellowshipPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg text-black/80 leading-relaxed text-center max-w-2xl mx-auto mb-10"
+            className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-10"
           >
             Three pillars that make the fellowship more than just a course.
           </motion.p>
@@ -168,10 +168,10 @@ export default function FellowshipPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-black mb-1 group-hover:text-violet-600 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-600 transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="text-base text-black/60 leading-relaxed">
+                  <p className="text-base font-medium text-black/70 leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
@@ -189,7 +189,7 @@ export default function FellowshipPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center mb-10"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black text-center mb-10"
           >
             FAQ
           </motion.h2>
@@ -213,13 +213,13 @@ export default function FellowshipPage() {
                 }}
                 className="group p-6 rounded-2xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-black/5 cursor-pointer"
               >
-                <summary className="text-lg font-bold text-black list-none flex items-center justify-between">
+                <summary className="text-lg font-bold tracking-tight text-black list-none flex items-center justify-between">
                   {item.question}
                   <span className="ml-4 text-black/40 group-open:rotate-45 transition-transform duration-200 text-xl">
                     +
                   </span>
                 </summary>
-                <p className="mt-3 text-base text-black/80 leading-relaxed">
+                <p className="mt-3 text-base font-medium text-black/70 leading-relaxed">
                   {item.answer}
                 </p>
               </motion.details>
@@ -236,7 +236,7 @@ export default function FellowshipPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4"
           >
             Stay in the Loop
           </motion.h2>
@@ -251,7 +251,7 @@ export default function FellowshipPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg text-white/60 leading-relaxed mb-8"
+            className="text-base md:text-lg text-white/40 leading-relaxed mb-8"
           >
             Get notified when applications open for the next cohort.
           </motion.p>
@@ -271,7 +271,7 @@ export default function FellowshipPage() {
               href="https://product-space-uiuc.kit.com/6fe917e91b"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-black font-bold px-10 py-4 rounded-full text-lg hover:bg-white/90 transition-colors"
+              className="inline-block bg-white text-black font-bold tracking-tight px-10 py-4 rounded-full text-lg hover:bg-white/90 transition-colors"
             >
               Join Mailing List
             </a>

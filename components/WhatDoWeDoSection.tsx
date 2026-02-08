@@ -51,13 +51,13 @@ function CardContent({ card }: { card: (typeof CARDS)[number] }) {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 h-[20rem]">
         <div className="p-8 md:p-10 flex flex-col justify-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-black mb-3">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-black mb-3">
             {card.title}
           </h3>
-          <p className="text-base md:text-lg text-black/80 leading-relaxed">
+          <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed">
             {card.description}
           </p>
-          <span className="mt-4 inline-block text-blue-600 underline underline-offset-2 font-medium hover:text-blue-700 transition-colors">
+          <span className="mt-4 inline-block text-violet-600 underline underline-offset-2 font-medium hover:text-violet-700 transition-colors">
             <RollingText
               text={`Explore ${card.title} →`}
               animate={hovered}
@@ -97,7 +97,7 @@ export default function WhatDoWeDoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black text-center mb-4"
         >
           What We Do
         </motion.h2>
@@ -110,7 +110,7 @@ export default function WhatDoWeDoSection() {
             delay: 0.1,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
-          className="text-base md:text-lg text-black/80 leading-relaxed text-center max-w-2xl mx-auto mb-12 md:mb-16"
+          className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-12 md:mb-16"
         >
           Three ways to get involved—each designed to sharpen a different edge of
           product thinking.

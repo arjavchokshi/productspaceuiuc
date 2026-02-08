@@ -134,7 +134,7 @@ export default function Hero() {
           />
           <motion.p
             variants={item}
-            className="font-bold text-black/80 text-center leading-tight"
+            className="font-bold text-black text-center leading-tight"
             style={{
               fontSize: "clamp(0.9rem, 3vh, 1.25rem)",
             }}
@@ -143,16 +143,17 @@ export default function Hero() {
           </motion.p>
         </motion.div>
 
-        {/* Blurb + Explore: bottom left */}
+        {/* Blurb + Explore: bottom left, aligned to page grid */}
+        <div className="absolute bottom-8 md:bottom-12 left-0 right-0 pointer-events-none">
         <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
-          className="absolute bottom-8 left-6 right-6 md:bottom-12 md:left-10 md:right-auto max-w-xl flex flex-col gap-3 pointer-events-auto"
+          className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col gap-3 pointer-events-auto"
         >
           <motion.p
             variants={item}
-            className="text-xl md:text-2xl lg:text-3xl font-bold text-black/90 leading-relaxed"
+            className="max-w-xl text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-black leading-relaxed"
           >
             A student-led initiative building the next generation of product
             leaders, designers, and builders at the University of Illinois.
@@ -182,6 +183,7 @@ export default function Hero() {
             </span>
           </motion.span>
         </motion.div>
+        </div>
       </div>
     </section>
   );

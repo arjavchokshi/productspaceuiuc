@@ -95,7 +95,7 @@ function ScrollFillSection() {
           <div className="max-w-5xl mx-auto px-6 md:px-10 space-y-10">
             <ScrollFillText
               text="Products shape how people live. The best ones feel inevitable in hindsight. In reality, they come from hard choices, clear strategy, and people who can turn ambiguity into action."
-              className="text-4xl lg:text-5xl font-bold text-black leading-tight"
+              className="text-4xl lg:text-5xl font-bold tracking-tight text-black leading-tight"
               progress={scrollYProgress}
               rangeStart={0}
               rangeEnd={0.35}
@@ -109,7 +109,7 @@ function ScrollFillSection() {
             />
             <ScrollFillText
               text="Our mission is to cultivate the next generation of product leaders by teaching product strategy and giving students a place to practice product management, product marketing, and product design."
-              className="text-3xl font-bold text-black/90 leading-snug"
+              className="text-3xl font-bold tracking-tight text-black/70 leading-snug"
               progress={scrollYProgress}
               rangeStart={0.55}
               rangeEnd={0.9}
@@ -135,7 +135,7 @@ function MobileScrollFillSection() {
     <div ref={ref} className="bg-[#e5e3e0] py-16 px-6 md:hidden space-y-8">
       <ScrollFillText
         text="Products shape how people live. The best ones feel inevitable in hindsight. In reality, they come from hard choices, clear strategy, and people who can turn ambiguity into action."
-        className="text-2xl font-bold text-black leading-tight"
+              className="text-2xl font-bold tracking-tight text-black leading-tight"
         progress={scrollYProgress}
         rangeStart={0}
         rangeEnd={0.35}
@@ -149,7 +149,7 @@ function MobileScrollFillSection() {
       />
       <ScrollFillText
         text="Our mission is to cultivate the next generation of product leaders by teaching product strategy and giving students a place to practice product management, product marketing, and product design."
-        className="text-xl font-bold text-black/90 leading-snug"
+              className="text-xl font-bold tracking-tight text-black/70 leading-snug"
         progress={scrollYProgress}
         rangeStart={0.55}
         rangeEnd={0.9}
@@ -189,12 +189,12 @@ function WhyWeExistSection() {
             {/* Why */}
             <div>
               <RevealBlock>
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-6">
                   Why Product Space exists
                 </h2>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-4">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-4">
                   A lot of students want to break into product. Many university
                   programs still teach business, engineering, and design in
                   separate lanes. Product lives at the intersection, so
@@ -202,7 +202,7 @@ function WhyWeExistSection() {
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg font-bold text-black/80 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed">
                   Product Space is the community we wished existed. It is built
                   for students who want real product reps and a culture that
                   takes the craft seriously.
@@ -213,12 +213,12 @@ function WhyWeExistSection() {
             {/* Our story */}
             <div>
               <RevealBlock>
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-6">
                   Our story
                 </h2>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-4">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-4">
                   Product Space started in August 2023. It began with a small
                   group of students trying to break into product management.
                   They looked around and saw the same problem. There was no
@@ -226,13 +226,13 @@ function WhyWeExistSection() {
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-4">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-4">
                   It is February 2026 now. That puts us about two and a half
                   years in.
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-4">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-4">
                   In that time, the growth has been obvious. Every semester,
                   interest has been higher than the last. More students show
                   up. More teams form. More projects ship. That pattern is what
@@ -240,7 +240,7 @@ function WhyWeExistSection() {
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed">
                   We have also watched members turn into alumni who land at
                   great companies and do real work on real teams. We have
                   watched our projects become more diverse, more ambitious, and
@@ -258,16 +258,16 @@ function WhyWeExistSection() {
             {/* What we do */}
             <div>
               <RevealBlock>
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-6">
                   What we do
                 </h2>
               </RevealBlock>
 
               <RevealBlock delay={0.05}>
-                <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-3">
                   We teach product strategy
                 </h3>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-8">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-8">
                   We focus on the thinking that makes product work. Picking the
                   right problem. Understanding users in a way that changes
                   decisions. Defining success with metrics that matter.
@@ -277,10 +277,10 @@ function WhyWeExistSection() {
               </RevealBlock>
 
               <RevealBlock delay={0.05}>
-                <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-3">
                   We give people real reps
                 </h3>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-8">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-8">
                   Skill comes from doing the work. Working in teams. Owning
                   decisions. Presenting reasoning. Taking feedback. Iterating
                   fast. That cycle, repeated over and over, is how you build
@@ -289,10 +289,10 @@ function WhyWeExistSection() {
               </RevealBlock>
 
               <RevealBlock delay={0.05}>
-                <h3 className="text-xl md:text-2xl font-bold text-black mb-3">
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-3">
                   We build a community that raises standards
                 </h3>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed">
                   Product Space is a place where you can walk in and be
                   surrounded by people who are building. You get peers who
                   challenge your thinking and mentors who can sharpen your
@@ -381,18 +381,18 @@ export default function AboutPage() {
             {/* Scrolling text */}
             <div>
               <RevealBlock>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6">
                   Where we are going
                 </h2>
               </RevealBlock>
               <RevealBlock delay={0.05}>
-                <p className="text-base md:text-lg text-black/80 leading-relaxed mb-4">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-4">
                   We are proud of the growth, and we see how much further this
                   can go.
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.05} className="mt-4">
-                <p className="text-base md:text-lg text-black/80 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed">
                   We want to build more pathways for beginners so entry into
                   product feels possible. We want deeper tracks for experienced
                   members so Product Space stays challenging. We want stronger
@@ -402,7 +402,7 @@ export default function AboutPage() {
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.1} className="mt-8">
-                <p className="text-base md:text-lg font-bold text-black/80 leading-relaxed">
+                <p className="text-base md:text-lg font-medium text-black/70 leading-relaxed">
                   There is demand. There is momentum. The next step is scale.
                 </p>
               </RevealBlock>

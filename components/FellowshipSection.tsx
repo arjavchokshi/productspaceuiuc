@@ -40,9 +40,9 @@ export default function FellowshipSection() {
   return (
     <section
       id="our-mission"
-      className="relative w-full bg-[#e5e3e0] py-16 md:py-24 overflow-hidden"
+      className="relative w-full bg-[#e5e3e0] pt-16 md:pt-24 pb-8 md:pb-12 overflow-hidden"
     >
-      <div className="max-w-6xl w-full pl-6 md:pl-10 pr-6 md:pr-10">
+      <div className="max-w-6xl w-full mx-auto px-6 md:px-10">
         {/* Blurb + image layout */}
         <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-center">
           <motion.div
@@ -66,7 +66,7 @@ export default function FellowshipSection() {
                   transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
                 },
               }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black leading-tight"
             >
               The Next Generation of Product Leaders
             </motion.h2>
@@ -79,7 +79,7 @@ export default function FellowshipSection() {
                   transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
                 },
               }}
-              className="text-base md:text-lg text-black/80 leading-relaxed"
+              className="text-base md:text-lg font-medium text-black/70 leading-relaxed"
             >
               We teach students the strategy, tradeoffs, and execution that
               define great product work during fellowship. Then they put it
@@ -96,7 +96,7 @@ export default function FellowshipSection() {
                   transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
                 },
               }}
-              className="inline-block text-blue-600 underline underline-offset-2 font-medium hover:text-blue-700 transition-colors"
+              className="inline-block text-violet-600 underline underline-offset-2 font-medium hover:text-violet-700 transition-colors"
               onMouseEnter={() => setMissionLinkHovered(true)}
               onMouseLeave={() => setMissionLinkHovered(false)}
             >
@@ -115,16 +115,18 @@ export default function FellowshipSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.1 }}
-            className="aspect-[4/3] w-full overflow-hidden relative"
+            className="flex items-center justify-center w-full"
           >
-            <Image
-              src="/groupphoto.jpg"
-              alt="Product Space group"
-              fill
-              className="object-cover"
-              style={{ objectPosition: "55% center" }}
-              sizes="(max-width: 768px) 100vw, 55vw"
-            />
+            <div className="aspect-[4/3] w-full overflow-hidden relative">
+              <Image
+                src="/groupphoto.jpg"
+                alt="Product Space group"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "55% center" }}
+                sizes="(max-width: 768px) 100vw, 55vw"
+              />
+            </div>
           </motion.div>
         </div>
       </div>

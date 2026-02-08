@@ -65,13 +65,13 @@ export default function HackathonPage() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-4"
           >
             Hackathon
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl mb-6"
+            className="text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mb-6"
           >
             Our hackathon brings together product, design, and engineering for a
             weekend of building and judging. Ship something real in 48 hours.
@@ -81,7 +81,7 @@ export default function HackathonPage() {
             href="https://product-space-uiuc.kit.com/6fe917e91b"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white/90 underline underline-offset-4 font-medium hover:text-white transition-colors"
+            className="inline-block text-white/70 underline underline-offset-4 font-medium hover:text-white transition-colors"
             onMouseEnter={() => setCtaHovered(true)}
             onMouseLeave={() => setCtaHovered(false)}
           >
@@ -120,12 +120,12 @@ export default function HackathonPage() {
                 <p className="text-4xl md:text-5xl font-black text-white leading-none">
                   {h.stat}
                   {h.unit && (
-                    <span className="text-lg md:text-xl font-bold text-violet-400 ml-1">
+                    <span className="text-lg md:text-xl font-bold tracking-tight text-violet-400 ml-1">
                       {h.unit}
                     </span>
                   )}
                 </p>
-                <p className="text-sm md:text-base text-white/50 mt-2 font-medium">
+                <p className="text-sm md:text-base text-white/40 mt-2 font-medium">
                   {h.label}
                 </p>
               </motion.div>
@@ -157,7 +157,7 @@ export default function HackathonPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg text-black/80 leading-relaxed text-center max-w-2xl mx-auto mb-14"
+            className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-14"
           >
             Form a team, pick a track, and build something that solves a real
             problem — all in one weekend.
@@ -201,10 +201,10 @@ export default function HackathonPage() {
                 <p className="text-4xl font-black text-violet-500/20 mb-4">
                   {card.step}
                 </p>
-                <h3 className="text-xl md:text-2xl font-bold text-black mb-2 group-hover:text-violet-600 transition-colors">
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-2 group-hover:text-violet-600 transition-colors">
                   {card.title}
                 </h3>
-                <p className="text-base text-black/80 leading-relaxed">
+                <p className="text-base font-medium text-black/70 leading-relaxed">
                   {card.desc}
                 </p>
               </motion.div>
@@ -221,7 +221,7 @@ export default function HackathonPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4"
           >
             Stay in the Loop
           </motion.h2>
@@ -236,7 +236,7 @@ export default function HackathonPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg text-white/60 leading-relaxed mb-8"
+            className="text-base md:text-lg text-white/40 leading-relaxed mb-8"
           >
             Be the first to know when registration opens.
           </motion.p>
@@ -256,7 +256,7 @@ export default function HackathonPage() {
               href="https://product-space-uiuc.kit.com/6fe917e91b"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-black font-bold px-10 py-4 rounded-full text-lg hover:bg-white/90 transition-colors"
+              className="inline-block bg-white text-black font-bold tracking-tight px-10 py-4 rounded-full text-lg hover:bg-white/90 transition-colors"
             >
               Join Mailing List
             </a>

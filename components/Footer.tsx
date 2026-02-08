@@ -37,7 +37,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="mt-12 mx-auto max-w-6xl px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-sm text-white/50">
+        <p className="text-sm font-medium text-white/40">
           &copy; {new Date().getFullYear()} Product Space @ UIUC 💜
         </p>
 
@@ -47,7 +47,7 @@ export default function Footer() {
             href="https://www.instagram.com/productspaceuiuc/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-colors"
+            className="text-white/40 hover:text-white transition-colors"
             aria-label="Instagram"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ export default function Footer() {
             href="https://www.linkedin.com/company/product-space-uiuc/posts/?feedView=all"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/60 hover:text-white transition-colors"
+            className="text-white/40 hover:text-white transition-colors"
             aria-label="LinkedIn"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

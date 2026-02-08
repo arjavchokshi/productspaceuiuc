@@ -147,13 +147,13 @@ export default function ProjectsPage() {
         >
           <motion.h1
             variants={fadeUp}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight mb-4"
           >
             Client Projects
           </motion.h1>
           <motion.p
             variants={fadeUp}
-            className="text-base md:text-lg text-white/80 leading-relaxed max-w-2xl mb-6"
+            className="text-base md:text-lg text-white/70 leading-relaxed max-w-2xl mb-6"
           >
             Our student teams partner with tech companies to tackle real-world
             business challenges — from user research and product roadmapping to
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
             href="https://product-space-uiuc.kit.com/6fe917e91b"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-white/90 underline underline-offset-4 font-medium hover:text-white transition-colors"
+            className="inline-block text-white/70 underline underline-offset-4 font-medium hover:text-white transition-colors"
             onMouseEnter={() => setCtaHovered(true)}
             onMouseLeave={() => setCtaHovered(false)}
           >
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black text-center mb-4"
           >
             Our Services
           </motion.h2>
@@ -201,7 +201,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg text-black/80 leading-relaxed text-center max-w-2xl mx-auto mb-10"
+            className="text-base md:text-lg font-medium text-black/70 leading-relaxed text-center max-w-2xl mx-auto mb-10"
           >
             End-to-end product work — from running user interviews to shaping
             product strategy and building clear roadmaps.
@@ -230,10 +230,10 @@ export default function ProjectsPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-black mb-1 group-hover:text-violet-600 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-black mb-1 group-hover:text-violet-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-base text-black/60 leading-relaxed">
+                  <p className="text-base font-medium text-black/70 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -251,7 +251,7 @@ export default function ProjectsPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center mb-10"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black text-center mb-10"
           >
             Past Clients
           </motion.h2>
@@ -303,7 +303,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.2 },
               },
             }}
-            className="text-base text-white/50 font-medium"
+            className="text-base text-white/40 font-medium"
           >
             {TESTIMONIAL.author} — {TESTIMONIAL.role}
           </motion.p>
@@ -318,7 +318,7 @@ export default function ProjectsPage() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={fadeUp}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-black mb-4"
           >
             Want to Work With Us?
           </motion.h2>
@@ -333,7 +333,7 @@ export default function ProjectsPage() {
                 transition: { ...fadeUp.visible.transition, delay: 0.1 },
               },
             }}
-            className="text-base md:text-lg text-black/60 leading-relaxed mb-8"
+            className="text-base md:text-lg font-medium text-black/70 leading-relaxed mb-8"
           >
             Have a product challenge your team is tackling? We&apos;d love to
             partner with you.
@@ -352,7 +352,7 @@ export default function ProjectsPage() {
           >
             <a
               href="mailto:productspaceuiuc@gmail.com?subject=Interested%20in%20Working%20With%20Product%20Space"
-              className="inline-block bg-black text-white font-bold px-10 py-4 rounded-full text-lg hover:bg-black/80 transition-colors"
+              className="inline-block bg-black text-white font-bold tracking-tight px-10 py-4 rounded-full text-lg hover:bg-black/80 transition-colors"
             >
               Get in Touch
             </a>
