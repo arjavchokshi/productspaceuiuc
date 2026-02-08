@@ -1,9 +1,44 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+
+function useTimeSinceAugust2023() {
+  return useMemo(() => {
+    const now = new Date();
+    const start = new Date(2023, 7); // August 2023
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December",
+    ];
+    const currentMonth = `${monthNames[now.getMonth()]} ${now.getFullYear()}`;
+    const totalMonths =
+      (now.getFullYear() - start.getFullYear()) * 12 +
+      (now.getMonth() - start.getMonth());
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    let duration: string;
+    if (years === 0) {
+      duration = months === 1 ? "one month" : `${months} months`;
+    } else if (months === 0) {
+      duration = years === 1 ? "one year" : `${years} years`;
+    } else {
+      const yPart = years === 1 ? "one year" : `${years} years`;
+      const half = months >= 4 && months <= 8;
+      if (half) {
+        duration = `about ${years} and a half years`;
+      } else if (months < 4) {
+        duration = `about ${yPart}`;
+      } else {
+        duration = `almost ${years + 1} years`;
+      }
+    }
+    return { currentMonth, duration };
+  }, []);
+}
 
 const stagger = {
   hidden: {},
@@ -95,21 +130,21 @@ function ScrollFillSection() {
           <div className="max-w-5xl mx-auto px-6 md:px-10 space-y-10">
             <ScrollFillText
               text="Products shape how people live. The best ones feel inevitable in hindsight. In reality, they come from hard choices, clear strategy, and people who can turn ambiguity into action."
-              className="text-4xl lg:text-5xl font-bold tracking-tight text-black leading-tight"
+              className="text-4xl lg:text-5xl tracking-tight text-black leading-tight"
               progress={scrollYProgress}
               rangeStart={0}
               rangeEnd={0.35}
             />
             <ScrollFillText
               text="Product Space exists to build those people."
-              className="text-4xl lg:text-5xl font-black text-black leading-tight"
+              className="text-4xl lg:text-5xl tracking-tight text-black leading-tight"
               progress={scrollYProgress}
               rangeStart={0.35}
               rangeEnd={0.55}
             />
             <ScrollFillText
               text="Our mission is to cultivate the next generation of product leaders by teaching product strategy and giving students a place to practice product management, product marketing, and product design."
-              className="text-3xl font-bold tracking-tight text-black/70 leading-snug"
+              className="text-3xl tracking-tight text-black leading-snug"
               progress={scrollYProgress}
               rangeStart={0.55}
               rangeEnd={0.9}
@@ -135,21 +170,21 @@ function MobileScrollFillSection() {
     <div ref={ref} className="bg-[#e5e3e0] py-16 px-6 md:hidden space-y-8">
       <ScrollFillText
         text="Products shape how people live. The best ones feel inevitable in hindsight. In reality, they come from hard choices, clear strategy, and people who can turn ambiguity into action."
-              className="text-2xl font-bold tracking-tight text-black leading-tight"
+              className="text-2xl tracking-tight text-black leading-tight"
         progress={scrollYProgress}
         rangeStart={0}
         rangeEnd={0.35}
       />
       <ScrollFillText
         text="Product Space exists to build those people."
-        className="text-2xl font-black text-black leading-tight"
+        className="text-2xl tracking-tight text-black leading-tight"
         progress={scrollYProgress}
         rangeStart={0.35}
         rangeEnd={0.55}
       />
       <ScrollFillText
         text="Our mission is to cultivate the next generation of product leaders by teaching product strategy and giving students a place to practice product management, product marketing, and product design."
-              className="text-xl font-bold tracking-tight text-black/70 leading-snug"
+              className="text-xl tracking-tight text-black leading-snug"
         progress={scrollYProgress}
         rangeStart={0.55}
         rangeEnd={0.9}
@@ -160,6 +195,7 @@ function MobileScrollFillSection() {
 
 /* Expanding circle + text section */
 function WhyWeExistSection() {
+  const { currentMonth, duration } = useTimeSinceAugust2023();
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -227,8 +263,7 @@ function WhyWeExistSection() {
               </RevealBlock>
               <RevealBlock delay={0.05}>
                 <p className="text-base md:text-lg text-black/70 leading-relaxed mb-4">
-                  It is February 2026 now. That puts us about two and a half
-                  years in.
+                  It is {currentMonth} now. That puts us {duration} in.
                 </p>
               </RevealBlock>
               <RevealBlock delay={0.05}>
@@ -410,13 +445,13 @@ export default function AboutPage() {
 
             {/* Sticky image */}
             <div className="hidden md:block relative">
-              <div className="sticky top-[25vh] rounded-2xl overflow-hidden max-h-[50vh]">
+              <div className="sticky top-[25vh] overflow-hidden max-h-[50vh]">
                 <Image
                   src="/logos/hackathon.png"
                   alt="Product Space hackathon"
                   width={600}
                   height={800}
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover"
                   sizes="50vw"
                 />
               </div>
