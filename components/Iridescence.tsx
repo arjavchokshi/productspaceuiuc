@@ -44,12 +44,14 @@ void main() {
 export default function Iridescence({
   color = [0.5, 0.6, 0.8],
   speed = 1.0,
+  hoverSpeed,
   amplitude = 0.1,
   mouseReact = true,
   className = "",
 }: {
   color?: number[];
   speed?: number;
+  hoverSpeed?: number;
   amplitude?: number;
   mouseReact?: boolean;
   className?: string;
@@ -67,12 +69,17 @@ export default function Iridescence({
     let program: InstanceType<typeof Program>;
 
     function resize() {
-      renderer.setSize(ctn.offsetWidth, ctn.offsetHeight);
+      // Use the wider dimension as a square so the pattern isn't squished
+      const size = Math.max(ctn.offsetWidth, ctn.offsetHeight);
+      renderer.setSize(size, size);
+      // Stretch the canvas to fill the container via CSS
+      gl.canvas.style.width = "100%";
+      gl.canvas.style.height = "100%";
       if (program) {
         program.uniforms.uResolution.value = new Color(
-          gl.canvas.width,
-          gl.canvas.height,
-          gl.canvas.width / gl.canvas.height
+          size,
+          size,
+          1
         );
       }
     }
@@ -124,11 +131,28 @@ export default function Iridescence({
       ctn.addEventListener("mousemove", handleMouseMove);
     }
 
+    function handleMouseEnter() {
+      if (hoverSpeed !== undefined) {
+        program.uniforms.uSpeed.value = hoverSpeed;
+      }
+    }
+    function handleMouseLeave() {
+      program.uniforms.uSpeed.value = speed;
+    }
+    if (hoverSpeed !== undefined) {
+      ctn.addEventListener("mouseenter", handleMouseEnter);
+      ctn.addEventListener("mouseleave", handleMouseLeave);
+    }
+
     return () => {
       cancelAnimationFrame(animateId);
       window.removeEventListener("resize", resize);
       if (mouseReact) {
         ctn.removeEventListener("mousemove", handleMouseMove);
+      }
+      if (hoverSpeed !== undefined) {
+        ctn.removeEventListener("mouseenter", handleMouseEnter);
+        ctn.removeEventListener("mouseleave", handleMouseLeave);
       }
       if (gl.canvas.parentNode === ctn) {
         ctn.removeChild(gl.canvas);

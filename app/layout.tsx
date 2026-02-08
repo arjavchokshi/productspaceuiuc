@@ -7,6 +7,10 @@ import LoadingScreen from "@/components/LoadingScreen";
 export const metadata: Metadata = {
   title: "Product Space | University of Illinois",
   description: "Product Space at the University of Illinois",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

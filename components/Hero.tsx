@@ -155,7 +155,7 @@ export default function Hero() {
             className="text-xl md:text-2xl lg:text-3xl font-bold text-black/90 leading-relaxed"
           >
             A student-led initiative building the next generation of product
-            thinkers, designers, and builders at the University of Illinois.
+            leaders, designers, and builders at the University of Illinois.
           </motion.p>
           <motion.span
             variants={item}

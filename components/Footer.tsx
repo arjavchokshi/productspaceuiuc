@@ -27,9 +27,10 @@ export default function Footer() {
         >
           <Iridescence
             color={[0.5, 0.6, 0.8]}
-            mouseReact={false}
+            mouseReact
             amplitude={0.5}
-            speed={0.2}
+            speed={1}
+            hoverSpeed={3}
           />
         </div>
       </div>
