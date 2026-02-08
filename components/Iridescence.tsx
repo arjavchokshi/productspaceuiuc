@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-// @ts-expect-error - ogl has no type declarations
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 
 const vertexShader = `
