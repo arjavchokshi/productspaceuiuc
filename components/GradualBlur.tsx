@@ -4,7 +4,23 @@ import React, { useEffect, useRef, useState, useMemo } from "react";
 
 import "./GradualBlur.css";
 
-const DEFAULT_CONFIG = {
+const DEFAULT_CONFIG: {
+  position: string;
+  strength: number;
+  height: string;
+  divCount: number;
+  exponential: boolean;
+  zIndex: number;
+  animated: boolean | "scroll";
+  duration: string;
+  easing: string;
+  opacity: number;
+  curve: string;
+  responsive: boolean;
+  target: string;
+  className: string;
+  style: Record<string, unknown>;
+} = {
   position: "bottom",
   strength: 2,
   height: "6rem",
@@ -240,13 +256,13 @@ function GradualBlur(props: GradualBlurProps) {
     if (isVertical) {
       baseStyle.height = responsiveHeight;
       baseStyle.width = (responsiveWidth as string) || "100%";
-      baseStyle[config.position as keyof React.CSSProperties] = 0;
+      (baseStyle as Record<string, unknown>)[config.position] = 0;
       baseStyle.left = 0;
       baseStyle.right = 0;
     } else if (isHorizontal) {
       baseStyle.width = (responsiveWidth as string) || responsiveHeight;
       baseStyle.height = "100%";
-      baseStyle[config.position as keyof React.CSSProperties] = 0;
+      (baseStyle as Record<string, unknown>)[config.position] = 0;
       baseStyle.top = 0;
       baseStyle.bottom = 0;
     }
