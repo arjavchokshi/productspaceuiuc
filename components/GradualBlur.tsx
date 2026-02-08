@@ -103,12 +103,12 @@ const useResponsiveDimension = (
   key: "height" | "width"
 ) => {
   const cap = key[0].toUpperCase() + key.slice(1);
-  const [value, setValue] = useState(config[key]);
+  const [value, setValue] = useState(config[key] as string);
   useEffect(() => {
     if (!responsive) return;
     const calc = () => {
       const w = window.innerWidth;
-      let v: string = config[key];
+      let v: string = config[key] as string;
       if (w <= 480 && config[`mobile${cap}` as keyof Config]) v = config[`mobile${cap}` as keyof Config] as string;
       else if (w <= 768 && config[`tablet${cap}` as keyof Config]) v = config[`tablet${cap}` as keyof Config] as string;
       else if (w <= 1024 && config[`desktop${cap}` as keyof Config]) v = config[`desktop${cap}` as keyof Config] as string;
@@ -119,7 +119,7 @@ const useResponsiveDimension = (
     window.addEventListener("resize", debounced as () => void);
     return () => window.removeEventListener("resize", debounced as () => void);
   }, [responsive, config, key, cap]);
-  return responsive ? value : config[key];
+  return responsive ? value : (config[key] as string);
 };
 
 const useIntersectionObserver = (ref: React.RefObject<HTMLElement | null>, shouldObserve = false) => {
