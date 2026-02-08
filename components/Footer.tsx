@@ -1,21 +1,37 @@
 "use client";
 
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Iridescence = dynamic(() => import("@/components/Iridescence"), {
+  ssr: false,
+});
 
 export default function Footer() {
   return (
     <footer className="relative w-full bg-black text-white pt-20 pb-10 overflow-hidden">
-      {/* Giant PS_Text logo stretching full width */}
-      <div className="w-full px-4">
-        <Image
-          src="/PS_Text.png"
-          alt="Product Space"
-          width={2400}
-          height={400}
-          className="w-full h-auto object-contain invert brightness-100 opacity-90"
-          sizes="100vw"
-          priority={false}
-        />
+      {/* Giant PS_Text logo with iridescence visible through the text */}
+      <div className="relative w-full px-4">
+        <div
+          className="relative w-full"
+          style={{
+            aspectRatio: "2400 / 400",
+            maskImage: "url(/PS_Text.png)",
+            WebkitMaskImage: "url(/PS_Text.png)",
+            maskSize: "contain",
+            WebkitMaskSize: "contain",
+            maskRepeat: "no-repeat",
+            WebkitMaskRepeat: "no-repeat",
+            maskPosition: "center",
+            WebkitMaskPosition: "center",
+          }}
+        >
+          <Iridescence
+            color={[0.5, 0.6, 0.8]}
+            mouseReact={false}
+            amplitude={0.5}
+            speed={0.2}
+          />
+        </div>
       </div>
 
       {/* Bottom bar */}

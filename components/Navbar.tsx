@@ -62,7 +62,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-end md:justify-center gap-6 md:gap-8 px-6 py-3 md:py-1.5 bg-white transition-transform duration-300 ease-out"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-end md:justify-center gap-6 md:gap-8 px-6 py-3 md:py-1.5 bg-[#f5f3ff] transition-transform duration-300 ease-out"
         style={{
           transform: navVisible ? "translateY(0)" : "translateY(-100%)",
         }}
@@ -102,7 +102,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[60] md:hidden bg-white flex flex-col items-center justify-center gap-2 pt-16 pb-24"
+            className="fixed inset-0 z-[60] md:hidden bg-[#f5f3ff] flex flex-col items-center justify-center gap-2 pt-16 pb-24"
           >
             <button
               type="button"

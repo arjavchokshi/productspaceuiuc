@@ -1,16 +1,21 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
 export default function ScrollController() {
   const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
 
   // Scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
 
   useEffect(() => {
@@ -25,8 +30,12 @@ export default function ScrollController() {
       autoRaf: true,
       anchors: true,
     });
+    lenisRef.current = lenis;
 
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      lenisRef.current = null;
+    };
   }, []);
 
   return null;

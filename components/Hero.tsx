@@ -68,7 +68,7 @@ export default function Hero() {
     >
       {/* Background — white */}
       <div
-        className="absolute inset-0 z-[-1] bg-white"
+        className="absolute inset-0 z-[-1] bg-[#f5f3ff]"
         aria-hidden
       />
 
@@ -109,16 +109,6 @@ export default function Hero() {
         }}
         aria-hidden
       >
-        {/* Noise texture overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.4] mix-blend-overlay"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-            maskImage: "linear-gradient(to top, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to top, black, transparent)",
-          }}
-          aria-hidden
-        />
       </div>
 
       {/* Content overlay */}

@@ -49,6 +49,7 @@ const Cubes = ({
   const simPosRef = useRef({ x: 0, y: 0 });
   const simTargetRef = useRef({ x: 0, y: 0 });
   const simRAFRef = useRef<number | null>(null);
+  const entranceCompleteRef = useRef(false);
 
   const colGap =
     typeof cellGap === "number"
@@ -238,7 +239,7 @@ const Cubes = ({
         simRAFRef.current = requestAnimationFrame(loop);
         return;
       }
-      if (!userActiveRef.current) {
+      if (!userActiveRef.current && entranceCompleteRef.current) {
         const pos = simPosRef.current;
         const tgt = simTargetRef.current;
         pos.x += (tgt.x - pos.x) * speed;
@@ -300,6 +301,16 @@ const Cubes = ({
   useEffect(() => {
     const handleEntranceRipple = () => {
       if (!sceneRef.current) return;
+
+      // Force all cubes flat (face forward) instantly
+      sceneRef.current.querySelectorAll<HTMLElement>(".cube").forEach((cube) => {
+        gsap.set(cube, { rotateX: 0, rotateY: 0 });
+      });
+
+      // Pause the auto-animate idle wandering during the ripple
+      userActiveRef.current = true;
+      if (idleTimerRef.current) clearTimeout(idleTimerRef.current);
+
       // Ripple from center of grid
       const centerRow = gridSize / 2;
       const centerCol = gridSize / 2;
@@ -311,11 +322,13 @@ const Cubes = ({
       const adjHold = holdTime / rippleSpeed;
 
       const rings: Record<number, Element[]> = {};
+      let maxRing = 0;
       sceneRef.current.querySelectorAll(".cube").forEach((cube) => {
         const r = +cube.getAttribute("data-row")!;
         const c = +cube.getAttribute("data-col")!;
         const dist = Math.hypot(r - centerRow, c - centerCol);
         const ring = Math.round(dist);
+        if (ring > maxRing) maxRing = ring;
         if (!rings[ring]) rings[ring] = [];
         rings[ring].push(...cube.querySelectorAll(".cube-face"));
       });
@@ -339,10 +352,28 @@ const Cubes = ({
             ease: "power3.out",
           });
         });
+
+      // Resume auto-animate after the ripple finishes
+      const totalDuration = maxRing * spreadDelay + adjAnimDur + adjHold + adjAnimDur;
+      setTimeout(() => {
+        userActiveRef.current = false;
+        entranceCompleteRef.current = true;
+      }, totalDuration * 1000 + 200);
     };
 
     window.addEventListener("ps-entrance-ripple", handleEntranceRipple);
-    return () => window.removeEventListener("ps-entrance-ripple", handleEntranceRipple);
+
+    // If no entrance ripple fires within 3s (e.g. client nav), unblock auto-animate
+    const fallback = setTimeout(() => {
+      if (!entranceCompleteRef.current) {
+        entranceCompleteRef.current = true;
+      }
+    }, 3000);
+
+    return () => {
+      window.removeEventListener("ps-entrance-ripple", handleEntranceRipple);
+      clearTimeout(fallback);
+    };
   }, [gridSize, faceColor, rippleColor, rippleSpeed]);
 
   useEffect(() => {

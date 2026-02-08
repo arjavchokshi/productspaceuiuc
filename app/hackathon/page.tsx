@@ -63,12 +63,6 @@ export default function HackathonPage() {
           variants={stagger}
           className="relative z-10 max-w-5xl mx-auto px-6 md:px-10 pb-12 md:pb-20 w-full"
         >
-          <motion.p
-            variants={fadeUp}
-            className="text-sm font-bold text-white/60 uppercase tracking-widest mb-3"
-          >
-            Build &amp; Compete
-          </motion.p>
           <motion.h1
             variants={fadeUp}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
