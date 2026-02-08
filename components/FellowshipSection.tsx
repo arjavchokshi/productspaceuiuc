@@ -40,11 +40,12 @@ export default function FellowshipSection() {
   return (
     <section
       id="our-mission"
-      className="relative w-full bg-[#e5e3e0] pt-16 md:pt-24 pb-8 md:pb-12 overflow-hidden"
+      className="relative w-full bg-[#e5e3e0] pt-16 md:pt-24 pb-8 md:pb-12"
     >
       <div className="max-w-6xl w-full mx-auto px-6 md:px-10">
         {/* Blurb + image layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-start">
+          <div className="md:sticky md:top-24">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -108,6 +109,7 @@ export default function FellowshipSection() {
               />
             </motion.a>
           </motion.div>
+          </div>
 
           {/* Group photo */}
           <motion.div

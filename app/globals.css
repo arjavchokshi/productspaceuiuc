@@ -49,6 +49,11 @@
   }
 }
 
+::selection {
+  background: #6d28d9;
+  color: white;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
