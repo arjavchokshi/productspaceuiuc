@@ -296,6 +296,55 @@ const Cubes = ({
     };
   }, [gridSize, tiltAt, resetAll, onClick, eventTargetRef]);
 
+  // Entrance ripple triggered by loading screen
+  useEffect(() => {
+    const handleEntranceRipple = () => {
+      if (!sceneRef.current) return;
+      // Ripple from center of grid
+      const centerRow = gridSize / 2;
+      const centerCol = gridSize / 2;
+      const baseRingDelay = 0.15;
+      const animDuration = 0.3;
+      const holdTime = 0.6;
+      const spreadDelay = baseRingDelay / rippleSpeed;
+      const adjAnimDur = animDuration / rippleSpeed;
+      const adjHold = holdTime / rippleSpeed;
+
+      const rings: Record<number, Element[]> = {};
+      sceneRef.current.querySelectorAll(".cube").forEach((cube) => {
+        const r = +cube.getAttribute("data-row")!;
+        const c = +cube.getAttribute("data-col")!;
+        const dist = Math.hypot(r - centerRow, c - centerCol);
+        const ring = Math.round(dist);
+        if (!rings[ring]) rings[ring] = [];
+        rings[ring].push(...cube.querySelectorAll(".cube-face"));
+      });
+
+      Object.keys(rings)
+        .map(Number)
+        .sort((a, b) => a - b)
+        .forEach((ring) => {
+          const delay = ring * spreadDelay;
+          const faces = rings[ring];
+          gsap.to(faces, {
+            backgroundColor: rippleColor,
+            duration: adjAnimDur,
+            delay,
+            ease: "power3.out",
+          });
+          gsap.to(faces, {
+            backgroundColor: faceColor,
+            duration: adjAnimDur,
+            delay: delay + adjAnimDur + adjHold,
+            ease: "power3.out",
+          });
+        });
+    };
+
+    window.addEventListener("ps-entrance-ripple", handleEntranceRipple);
+    return () => window.removeEventListener("ps-entrance-ripple", handleEntranceRipple);
+  }, [gridSize, faceColor, rippleColor, rippleSpeed]);
+
   useEffect(() => {
     const el = eventTargetRef.current;
     if (!el) return;

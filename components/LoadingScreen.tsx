@@ -13,7 +13,11 @@ export default function LoadingScreen() {
     const handleLoad = () => {
       // Give the fill animation a moment to finish, then fade out
       setFillComplete(true);
-      setTimeout(() => setLoading(false), 600);
+      setTimeout(() => {
+        setLoading(false);
+        // Tell the cubes to do an entrance ripple
+        window.dispatchEvent(new CustomEvent("ps-entrance-ripple"));
+      }, 600);
     };
 
     if (document.readyState === "complete") {
@@ -80,23 +84,35 @@ export default function LoadingScreen() {
               />
             </motion.div>
 
-            {/* Subtle glow pulse after fill */}
+            {/* Bright flash after fill */}
             {fillComplete && (
-              <motion.div
-                className="absolute inset-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 0.4, 0] }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                <Image
-                  src="/logo.png"
-                  alt=""
-                  width={128}
-                  height={176}
-                  className="w-full h-full object-contain brightness-0 invert blur-md"
-                  priority
-                />
-              </motion.div>
+              <>
+                {/* Logo glow */}
+                <motion.div
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  <Image
+                    src="/logo.png"
+                    alt=""
+                    width={128}
+                    height={176}
+                    className="w-full h-full object-contain brightness-0 invert blur-lg"
+                    priority
+                  />
+                </motion.div>
+                {/* Radial light burst */}
+                <motion.div
+                  className="absolute inset-[-100%] rounded-full"
+                  initial={{ opacity: 0, scale: 0.3 }}
+                  animate={{ opacity: [0, 0.5, 0], scale: [0.3, 1.5] }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                  <div className="w-full h-full rounded-full bg-white/30 blur-3xl" />
+                </motion.div>
+              </>
             )}
           </div>
         </motion.div>
