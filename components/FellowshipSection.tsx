@@ -87,7 +87,7 @@ export default function FellowshipSection() {
               1:1 for a product job.
             </motion.p>
             <motion.a
-              href="#our-mission"
+              href="/about"
               variants={{
                 hidden: { opacity: 0, y: 12 },
                 visible: {

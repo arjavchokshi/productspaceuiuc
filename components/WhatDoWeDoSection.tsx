@@ -9,7 +9,7 @@ import RollingText from "@/components/RollingText";
 const CARDS = [
   {
     title: "Fellowship",
-    href: "#our-mission",
+    href: "/fellowship",
     description:
       "Join our core program to learn product strategy, user research, and execution, then apply it to projects and careers in PM, PMM, and Product Design.",
     image: "/logos/fellowship.jpeg",
@@ -17,7 +17,7 @@ const CARDS = [
   },
   {
     title: "Projects",
-    href: "#projects",
+    href: "/projects",
     description:
       "Ship real products with teams. Work on semester-long initiatives with companies and peers to build your portfolio and impact.",
     image: "/logos/projects.JPG",
@@ -25,7 +25,7 @@ const CARDS = [
   },
   {
     title: "Hackathon",
-    href: "#hackathon",
+    href: "/hackathon",
     description:
       "Build and compete. Our hackathon brings together product, design, and engineering for a weekend of building and judging.",
     image: "/logos/hackathon.png",
