@@ -86,12 +86,15 @@ type Config = typeof DEFAULT_CONFIG & {
   hoverIntensity?: number;
   animated?: boolean | "scroll";
   onAnimationComplete?: () => void;
+  width?: string;
+  height: string;
   mobileHeight?: string;
   tabletHeight?: string;
   desktopHeight?: string;
   mobileWidth?: string;
   tabletWidth?: string;
   desktopWidth?: string;
+  [key: string]: unknown;
 };
 
 const useResponsiveDimension = (
