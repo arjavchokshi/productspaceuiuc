@@ -5,7 +5,7 @@ import "./WhereWeGoSection.css";
 
 const LOGO_FILES = [
   "accenture.png",
-  "apple.png",
+  "Apple_logo_black.svg",
   "bcg.png",
   "blackrock.png",
   "cisco.png",
@@ -26,23 +26,9 @@ const LOGO_FILES = [
   "visa.png",
 ];
 
-const LOGO_SIZE = 64;
+const LOGO_SIZE = 72;
 
-const EXTERNAL_LOGO_URLS: Record<string, string> = {
-  "apple.png": "/api/logo/apple",
-};
-
-const BIG_LOGO_FILES = new Set([
-  "united.png",
-  "microsoft.png",
-  "blackrock.png",
-  "spacex.png",
-  "accenture.png",
-  "TikTok-Logomark&Wordmark-Vertical-Logo.wine.svg",
-  "Rivian-Logo.png",
-]);
-const EXTRA_BIG_LOGO_FILES = new Set(["robinhood.png", "synchrony.png"]);
-const SMALL_LOGO_FILES = new Set(["ey.png"]);
+const EXTERNAL_LOGO_URLS: Record<string, string> = {};
 
 // Staggered rows: alternating 5 and 4 per row
 const ROWS = [
@@ -79,17 +65,7 @@ function LogoBubble({ file, index }: { file: string; index: number }) {
         <img
           src={EXTERNAL_LOGO_URLS[file] ?? `/logos/${encodeURIComponent(file)}`}
           alt=""
-          width={LOGO_SIZE}
-          height={LOGO_SIZE}
-          className={
-            EXTRA_BIG_LOGO_FILES.has(file)
-              ? "logo-img logo-img-extra-big"
-              : BIG_LOGO_FILES.has(file)
-                ? "logo-img logo-img-big"
-                : SMALL_LOGO_FILES.has(file)
-                  ? "logo-img logo-img-small"
-                  : "logo-img"
-          }
+          className="logo-img"
         />
       </div>
     </motion.div>

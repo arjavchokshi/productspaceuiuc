@@ -69,24 +69,11 @@
 }
 
 .logo-img {
-  width: 70%;
-  height: 70%;
+  display: block;
+  width: 72%;
+  height: 72%;
   object-fit: contain;
-}
-
-.logo-img-big {
-  width: 95%;
-  height: 95%;
-}
-
-.logo-img-extra-big {
-  width: 98%;
-  height: 98%;
-}
-
-.logo-img-small {
-  width: 52%;
-  height: 52%;
+  object-position: center;
 }
 
 .and-more-pill {

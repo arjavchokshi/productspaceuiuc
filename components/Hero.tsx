@@ -75,7 +75,7 @@ export default function Hero() {
       {/* Full-screen grid of cubes — only render when in view */}
       <div
         ref={cubeContainerRef}
-        className="absolute inset-0 z-0 h-full w-full"
+        className="absolute inset-0 z-0 h-full w-full opacity-50"
         aria-hidden
       >
         {cubesInView && (
@@ -97,7 +97,7 @@ export default function Hero() {
         )}
       </div>
 
-      {/* Gradient blur from bottom — lighter blur on mobile for performance */}
+      {/* Gradient blur from bottom */}
       <div
         className="absolute bottom-0 left-0 right-0 z-[5] pointer-events-none overflow-hidden"
         style={{
@@ -108,8 +108,7 @@ export default function Hero() {
           WebkitMaskImage: "linear-gradient(to top, black, transparent)",
         }}
         aria-hidden
-      >
-      </div>
+      />
 
       {/* Content overlay */}
       <div className="absolute inset-0 z-10 pointer-events-none">

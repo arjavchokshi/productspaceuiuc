@@ -73,7 +73,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm font-bold tracking-tight text-black hover:text-violet-700 transition-all duration-300 hover:[text-shadow:0_0_12px_rgba(109,40,217,0.6)]"
+              className="text-sm font-bold tracking-tight text-black hover:text-violet-700 transition-colors duration-300"
             >
               {link.label}
             </Link>
