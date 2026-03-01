@@ -351,7 +351,7 @@ export default function ProjectsPage() {
             }}
           >
             <a
-              href="mailto:productspaceuiuc@gmail.com?subject=Interested%20in%20Working%20With%20Product%20Space"
+              href="mailto:productspaceui@gmail.com?subject=Interested%20in%20Working%20With%20Product%20Space"
               className="inline-block bg-black text-white font-bold tracking-tight px-10 py-4 rounded-full text-lg hover:bg-black/80 transition-colors"
             >
               Get in Touch
